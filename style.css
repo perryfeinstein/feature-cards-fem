@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,400,600&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: hsl(0, 0%, 98%);
+  font-family: 'Poppins', sans-serif;
+  height: 100vh;
+}
+
+.container {
+  text-align: center;
+}
+
+.intro {
+  display: inline-block;
+  max-width: 550px;
+  color: hsl(234, 12%, 34%);
+  margin: 20px 0 -80px 0;
+}
+
+.intro p {
+  margin-top: -0.25em;
+  color: hsl(229, 6%, 66%);
+}
+
+.intro span {
+  font-weight: 200;
+  color: hsl(229, 6%, 66%);
+}
+
+.wrapper {
+  margin-top: 3.5em;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-auto-rows: minmax(100px, auto);
+  grid-gap: 2em;
+}
+
+.wrapper > div {
+  background: #fff;
+  padding: 1em;
+}
+
+.wrapper img {
+  float: right;
+}
+
+.box {
+  color: hsl(234, 12%, 34%);
+  text-align: left;
+  border-radius: 5px;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.1), 0 10px 10px rgba(0,0,0,0.1);
+  transition: .5s ease all;
+}
+
+.box h3, p {
+  padding-left: 10px;
+}
+
+.box p {
+  color: hsl(229, 6%, 66%);
+  font-size: .8em;
+  max-width: 20em;
+  margin-top: -10px;
+}
+
+.box:hover {
+  -webkit-transform: scale(0.8);
+  -ms-transform: scale(0.8);
+  transform: scale(0.8);
+}
+
+.box-1 {
+  border-top: 4px solid hsl(180, 62%, 55%);
+  grid-column: 2/4;
+  grid-row: 2/4;
+}
+
+.box-2 {
+  border-top: 4px solid hsl(0, 78%, 62%);
+  grid-column: 4/6;
+  grid-row: 1/3;
+}
+
+.box-3 {
+  border-top: 4px solid hsl(212, 86%, 64%);
+  grid-column: 6/8;
+  grid-row: 2/4;
+}
+
+.box-4 {
+  border-top: 4px solid hsl(34, 97%, 64%);
+  grid-column: 4/6;
+  grid-row: 3/5;
+}
+
+/* Media Queries */
+@media only screen and (max-width:1000px) {
+
+  .wrapper {
+    margin-top: 3.5em;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-auto-rows: minmax(100px, auto);
+    grid-gap: 2em;
+  }
+
+  .box {
+    min-width: 300px;
+  }
+
+  .box-1 {
+    grid-column: 2/3;
+    grid-row: 1/2;
+  }
+
+  .box-2 {
+    grid-column: 2/3;
+    grid-row: 2/3;
+  }
+
+  .box-3 {
+    grid-column: 2/3;
+    grid-row: 3/4;
+  }
+
+  .box-4 {
+    grid-column: 2/3;
+    grid-row: 4/5;
+  }
+}
